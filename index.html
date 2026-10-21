@@ -1,333 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Ethan White</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ethan White</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ethan White: physics and math graduate, Claude Corps Fellow, and M.S. Computer Science student at Georgia Tech.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ethan White">
+<meta property="og:title" content="Ethan White">
+<meta property="og:description" content="Physics & math grad, Claude Corps Fellow at Year Up United, and M.S. Computer Science student at Georgia Tech.">
+<meta property="og:url" content="https://ewhites.github.io/">
+<meta property="og:image" content="https://ewhites.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ethan White: physics and math grad, Claude Corps Fellow, M.S. Computer Science at Georgia Tech">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <main>
-    <div class="tabs">
-      <input type="radio" name="tabs" id="tab-home" checked>
-      <input type="radio" name="tabs" id="tab-about">
-      <input type="radio" name="tabs" id="tab-blog">
-      <input type="radio" name="tabs" id="tab-resume">
-      <input type="radio" name="tabs" id="tab-projects">
-      <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
 
-      <div class="theme-scope">
-        <header class="site-header">
-          <div class="header-inner">
-            <div class="header-name">Ethan White</div>
-            <div class="labels labels-header">
-              <label class="tab-label" for="tab-home">Home</label>
-              <label class="tab-label" for="tab-about">About</label>
-              <label class="tab-label" for="tab-blog">Blog</label>
-              <label class="tab-label" for="tab-resume">Resume</label>
-              <label class="tab-label" for="tab-projects">Projects</label>
-            </div>
-          </div>
-        </header>
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Ethan White</a>
+    <nav class="nav" aria-label="Main">
+      <a href="blog.html">Blog</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
 
-        <div class="panels">
-          <!-- HOME -->
-          <section class="panel" id="panel-home">
-            <div class="home-hero">
-              <h1>Ethan White</h1>
-              <div class="contact">
-                <p><a href="mailto:ejwhite43@tntech.edu">ejwhite43@tntech.edu</a></p>
-                <p><a href="tel:+18653338117">+1 865 333 8117</a></p>
-              </div>
-              <div class="labels labels-home">
-                <label class="tab-label" for="tab-home">Home</label>
-                <label class="tab-label" for="tab-about">About</label>
-                <label class="tab-label" for="tab-blog">Blog</label>
-                <label class="tab-label" for="tab-resume">Resume</label>
-                <label class="tab-label" for="tab-projects">Projects</label>
-              </div>
-              <div class="theme-toggle">
-                <label class="theme-toggle-label" for="theme-toggle">
-                  <span class="toggle-text">Dark mode</span>
-                  <span class="toggle-pill"><span class="toggle-dot"></span></span>
-                </label>
-              </div>
-            </div>
-          </section>
-
-        <!-- ABOUT -->
-        <section class="panel" id="panel-about">
-          <div class="about-wrap">
-            <div class="about-text">
-              <p>
-                I’m a Physics & Applied Mathematics Honors student at <strong>Tennessee Tech</strong> who moves likes to build cool things on the side of my abundance of
-                extracurricular initiatives, namely Trash Force, a student organization I founded to tackle litter, and being an RA for 4 years.
-              </p>
-              <p>
-                I'm trying to make a pivot in my career towards something a bit more industry-focused. I'm particularly interested in data analysis, where my physics background provides me a unique perspective.
-                I'm looking for full-time opportunities starting Summer 2026. 
-              </p>
-              <div>
-                <strong>On-campus initiatives</strong>
-                <ul class="badges">
-                  <li>Resident Assistant — 4th year</li>
-                  <li>Office of Sustainability</li>
-                  <li>Trash Force — Founder & President</li>
-                  <li>Student Government Association</li>
-                  <li>Physics Club / Sigma Pi Sigma</li>
-                  <li>Math Club / Mu Alpha Theta</li>
-                </ul>
-              </div>
-            </div>
-            <div class="about-photo">
-              <img src="images/lakelouise.jpg" alt="Ethan White portrait">
-            </div>
-          </div>
-        </section>
-
-        <!-- BLOG -->
-        <section class="panel" id="panel-blog">
-          <div class="blog-bleed">
-            <div class="blog-wrap">
-              <input type="radio" name="blog-tabs" id="blog-1" checked>
-              <input type="radio" name="blog-tabs" id="blog-2">
-              <input type="radio" name="blog-tabs" id="blog-3">
-              <input type="radio" name="blog-tabs" id="blog-4">
-              <input type="radio" name="blog-tabs" id="blog-5">
-              <input type="radio" name="blog-tabs" id="blog-6">
-              <input type="radio" name="blog-tabs" id="blog-7">
-              <input type="radio" name="blog-tabs" id="blog-8">
-              <aside class="blog-sidebar">
-                <div class="blog-sidebar-title">Blog</div>
-                <div class="blog-year">2026</div>
-                <label class="blog-link" for="blog-1">Textbooks I think are good for self-studying physics/math</label>
-                <label class="blog-link" for="blog-2">Transitioning into industry with a physics bachelors</label>
-                <label class="blog-link" for="blog-3">How I founded Trash Force to eliminate litter</label>
-                <label class="blog-link" for="blog-4">Experience as an RA -- would I suggest it?</label>
-                <label class="blog-link" for="blog-5">Thoughts on a physics bachelors -- is it worth it?</label>
-                <label class="blog-link" for="blog-6">How I built Passd to eliminate food insecurity</label>
-                <label class="blog-link" for="blog-7">My particle physics balloon project</label>
-                <div class="blog-year">2025</div>
-                <label class="blog-link" for="blog-8">My REU experience in a nutshell</label>
-              </aside>
-              <div class="blog-content">
-                <article class="blog-post" id="post-1">
-                  <h3>Textbooks I think are good for self-studying physics/math</h3>
-                  <div class="blog-meta">2026 · Resources</div>
-                  <p>
-                    If you want to self‑study, the best books are the ones that keep you moving.
-                    I’ll share the ones that helped me build intuition fast and where I think each
-                    one shines (concepts, problems, or both).
-                  </p>
-                  <p>
-                    I’ll also include a short “how to use this book” note for each recommendation
-                    so you can get the most out of it without getting stuck.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-2">
-                  <h3>Transitioning into industry with a physics bachelors</h3>
-                  <div class="blog-meta">2026 · Career</div>
-                  <p>
-                    Here’s my honest view on the bridge from theory to industry: what skills
-                    mattered most, what I wish I had emphasized sooner, and how I framed my
-                    experience to make it legible to non‑physics roles.
-                  </p>
-                  <p>
-                    I’ll also share a short checklist of projects and habits that helped me
-                    feel confident applying outside academia.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-3">
-                  <h3>How I founded Trash Force to eliminate litter</h3>
-                  <div class="blog-meta">2026 · Community</div>
-                  <p>
-                    Trash Force started as a small idea: make cleanup visible and contagious.
-                    I’ll walk through how we organized volunteers, built momentum, and kept it
-                    sustainable across semesters.
-                  </p>
-                  <p>
-                    If you’re starting a campus initiative, I’ll share the 3 things that made
-                    the biggest difference for us.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-4">
-                  <h3>Experience as an RA -- would I suggest it?</h3>
-                  <div class="blog-meta">2026 · Campus Life</div>
-                  <p>
-                    Being an RA is intense and rewarding. I’ll share what the day‑to‑day actually
-                    looks like, the skills I picked up, and the parts I didn’t expect.
-                  </p>
-                  <p>
-                    If you’re considering the role, this is the candid version I wish I had
-                    before applying.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-5">
-                  <h3>Thoughts on a physics bachelors -- is it worth it?</h3>
-                  <div class="blog-meta">2026 · Perspective</div>
-                  <p>
-                    Physics trains your brain in a unique way, but it’s not always a straight path.
-                    I’ll cover what felt valuable, what felt inefficient, and how I would do it
-                    again if I were starting over.
-                  </p>
-                  <p>
-                    I’ll also share how I think about ROI beyond salary — skills, network, and
-                    long‑term optionality.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-6">
-                  <h3>How I built Passd to eliminate food insecurity</h3>
-                  <div class="blog-meta">2026 · Product</div>
-                  <p>
-                    Passd is a project about access and dignity. This post will outline the
-                    problem, the early prototypes, and what we learned from real users.
-                  </p>
-                  <p>
-                    I’ll also share the technical stack and the community partnerships that
-                    helped it move from idea to pilot.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-7">
-                  <h3>My particle physics balloon project</h3>
-                  <div class="blog-meta">2026 · Research</div>
-                  <p>
-                    We built a balloon payload to explore particle detection at altitude. This
-                    post will cover the design constraints, instrumentation choices, and the
-                    data we managed to pull down.
-                  </p>
-                  <p>
-                    I’ll also share lessons learned on thermal, power, and data logging at
-                    low pressure.
-                  </p>
-                </article>
-                <article class="blog-post" id="post-8">
-                  <h3>My REU experience in a nutshell</h3>
-                  <div class="blog-meta">2025 · Research</div>
-                  <p>
-                    The REU was fast‑paced and transformative. I’ll summarize the project,
-                    what it taught me, and how it changed the way I approach research.
-                  </p>
-                  <p>
-                    If you’re applying to REUs, I’ll share a few practical tips that helped
-                    me stand out.
-                  </p>
-                </article>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- RESUME -->
-        <section class="panel resume" id="panel-resume">
-          <h3>Education</h3>
-          <div class="timeline">
-            <div class="titem">
-              <div class="tcontent">
-                <div class="trole">B.Sc. Physics; B.Sc. Mathematics, Honors College — GPA 3.63/4.00</div>
-                <div class="torg">Tennessee Technological University — Cookeville, TN</div>
-                <div class="tdates">Anticipated May 2026</div>
-                <ul class="subbullets">
-                  <li>Hard Skills: Python, C++, ROOT, HTML/CSS, Excel, Tableau, PCB Design, SolidWorks, Hardware Instrumentation, Vacuum Pumps</li>
-                </ul>
-              </div>
-            </div>
-            <div class="arrow"><span>▼ next</span></div>
-          </div>
-
-          <h3>Professional Experience</h3>
-          <div class="timeline">
-            <div class="titem">
-              <div class="tcontent">
-                <div class="trole">Particle Physics Research Assistant</div>
-                <div class="torg">University of Utah — Salt Lake City, UT</div>
-                <div class="tdates">May 2025 – August 2025</div>
-                <ul class="subbullets">
-                  <li>Applied time-matching corrections to IceCube SAE test station data with TALE infill data, applied calibration and developed event reconstruction program using complex statistics for relevant IceCube SAE data through NSF REU funding.</li>
-                  <li>Event reconstruction algorithm developed to simulate original particle trajectory, energy, and galactic plane origin.</li>
-                  <li>Poster presented at Telescope Array Collaboration Meeting in Tokyo, Japan.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="arrow"><span>↓</span></div>
-
-            <div class="titem">
-              <div class="tcontent">
-                <div class="trole">Nuclear Physics Research Assistant</div>
-                <div class="torg">Tennessee Technological University — Cookeville, TN</div>
-                <div class="tdates">May 2024 – August 2024</div>
-                <ul class="subbullets">
-                  <li>Applied electronic crosstalk corrections, created an efficiency curve of TRIUMF GRIFFIN detectors, and probed the gamma-gamma correlation matrix data to create an independent level scheme of 35Mg decay data that I collected in 2022.</li>
-                  <li>Calibrated scintillation bars and reverse-engineered undocumented photomultiplier tubes through circuit board analysis.</li>
-                  <li>Designed vacuum system for TTU's in-house Ion Beam, tested six independent turbomolecular pumps for functionality.</li>
-                  <li>Poster presented through CEU funding at APS DNP 2024 in Boston, MA and SESAPS 2024 in Charlotte, NC.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="arrow"><span>↓</span></div>
-
-            <div class="titem">
-              <div class="tcontent">
-                <div class="trole">Nuclear Physics Research Assistant</div>
-                <div class="torg">Academia Sinica Institute of Physics — Taipei, Taiwan</div>
-                <div class="tdates">May 2023 – July 2023</div>
-                <ul class="subbullets">
-                  <li>Calibrated a low energy germanium radiation detector using Americium source using nuclear-physics C++ framework ROOT.</li>
-                  <li>Established experimental axion-photon-photon coupling constant limits from TEXONO and XENONnT datasets, comparing with theoretical calculations from peer-reviewed publications.</li>
-                  <li>Poster presented at APS April 2024 in Sacramento, CA and SESAPS 2023 in Richmond, KY.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="arrow"><span>↓</span></div>
-
-            <div class="titem">
-              <div class="tcontent">
-                <div class="trole">Resident Assistant</div>
-                <div class="torg">Tennessee Technological University — Cookeville, TN</div>
-                <div class="tdates">December 2022 – Present</div>
-                <ul class="subbullets">
-                  <li>Provided 24/7 leadership to my hall of 30+ students, solved interpersonal conflicts, managed monthly programs, reinforced institutional policies and conducted monthly room inspections and paperwork management.</li>
-                  <li>Worked at an office space ten hours a week assisting students with residential appliance issues and lockouts.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section class="panel" id="panel-projects">
-          <div class="grid">
-            <a class="card" href="https://github.com/ewhites/stock-montecarlo-gbm" target="_blank">
-              <img class="card-img" src="images/simulation.png" alt="Line plot and simulated GBM price paths">
-              <h4>Market Analysis: GBM, MC</h4>
-              <p>Simulating financial markets using Geometric Brownian Motion (GBM), Monte Carlo methods, and risk metrics like Value at Risk (VaR)</p>
-              <div class="tags"><span class="tag py">Python</span></div>
-            </a>
-            <a class="card" href="https://github.com/ewhites/markowitz-optimization" target="_blank">
-              <img class="card-img" src="images/projects/markowitz.jpg" alt="Efficient frontier">
-              <h4>Portfolio Optimization</h4>
-              <p>Markowitz optimization and principal component analysis (PCA) to analyze stock returns. Explores correlations of PCA factors with sector ETFs to interpret underlying market drivers. Coming soon!</p>
-              <div class="tags"><span class="tag py">Python</span></div>
-            </a>
-            <a class="card" href="https://github.com/ewhites/ewhites.github.io" target="_blank">
-              <img class="card-img" src="images/presentation.webp" alt="Personal site screenshot">
-              <h4>Personal Website</h4>
-              <p>Description of my life, experience, and things I'm up to: a portable resume</p>
-              <div class="tags"><span class="tag html">HTML</span><span class="tag css">CSS</span></div>
-            </a>
-          </div>
-        </section>
-        </div>
-
-        <footer class="site-footer">
-          <a href="https://www.linkedin.com/in/ethan-white-44695a1b8/" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/ewhites" target="_blank">GitHub</a>
-          <div class="footer-note">I am always available for exciting discussion!</div>
-        </footer>
-      </div>
+<main class="wrap">
+  <div class="stack">
+    <h1>Hi, I'm Ethan!</h1>
+    <p class="lede">I recently graduated from Tennessee Tech with degrees in physics and math, and now I'm a Claude Corps Fellow at Year Up United in Boston. I really enjoy math and coding, especially when they make a system run better.</p>
+    <p class="lede">This site is mostly my blog, plus my resume.</p>
+    <div class="btn-row" style="margin-top:8px">
+      <a class="btn primary" href="resume.html">See my resume</a>
+      <a class="btn" href="blog.html">Read the blog</a>
     </div>
-  </main>
+  </div>
+
+  <section class="section" aria-labelledby="now">
+    <h2 id="now">What I'm up to</h2>
+    <dl class="facts">
+      <dt>Working</dt>
+      <dd>Building AI tools at Year Up United as part of the first cohort of Claude Corps (a fellowship from Anthropic, CodePath, and Social Finance).</dd>
+      <dt>Studying</dt>
+      <dd>M.S. in Computer Science (Machine Learning) at Georgia Tech</dd>
+      <dt>Graduated</dt>
+      <dd>B.S. in Physics and Math, Tennessee Tech, 2026</dd>
+      <dt>Based in</dt>
+      <dd>Boston, MA</dd>
+    </dl>
+  </section>
+
+  <section class="section" aria-labelledby="latest">
+    <div class="resume-head">
+      <h2 id="latest">Latest writing</h2>
+      <a href="blog.html">All posts</a>
+    </div>
+    <ul class="post-list">
+      <li>
+        <time datetime="2026-10-21">Oct 21, 2026</time>
+        <div class="body">
+          <span class="tag" data-tag="physics">Physics</span>
+          <h3><a href="posts/double-pendulum.html">Two pendulums, 0.001° apart</a></h3>
+          <p>I simulated two double pendulums that start 0.001° apart. In under 8 seconds, they're doing completely different things.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" aria-labelledby="contact">
+    <h2 id="contact">Say hi</h2>
+    <p>Email is the best way to reach me: <a href="mailto:ethanwhiiite@gmail.com">ethanwhiiite@gmail.com</a>. I'm also on <a href="https://www.linkedin.com/in/ewhites" target="_blank" rel="noopener">LinkedIn</a> and <a href="https://github.com/ewhites" target="_blank" rel="noopener">GitHub</a>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Ethan White</span>
+    <ul>
+      <li><a class="icon-link" href="mailto:ethanwhiiite@gmail.com" aria-label="Email"><img src="assets/icons/email.png" alt="Email" width="28" height="28"></a></li>
+      <li><a class="icon-link" href="https://www.linkedin.com/in/ewhites" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28"></a></li>
+      <li><a class="icon-link" href="https://github.com/ewhites" target="_blank" rel="noopener" aria-label="GitHub"><img src="assets/icons/github.png" alt="GitHub" width="28" height="28"></a></li>
+    </ul>
+  </div>
+</footer>
+
 </body>
 </html>

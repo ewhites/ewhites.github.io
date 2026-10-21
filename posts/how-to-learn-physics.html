@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to learn physics · Ethan White</title>
+<meta name="description" content="Textbook suggestions and alternative resources to learn physics in the most efficient way possible. Recommendations collected throughout 4 years of physics study and research.">
+<!-- Link preview (shows when the post is shared). -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ethan White">
+<meta property="og:title" content="How to learn physics">
+<meta property="og:description" content="Textbook suggestions and alternative resources to learn physics in the most efficient way possible. Recommendations collected throughout 4 years of physics study and research.">
+<meta property="og:url" content="https://ewhites.github.io/posts/how-to-learn-physics.html">
+<meta property="og:image" content="https://ewhites.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Ethan White</a>
+    <nav class="nav" aria-label="Main">
+      <a href="../blog.html" aria-current="page">Blog</a>
+      <a href="../resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article>
+    <div class="stack">
+      <a class="back" href="../blog.html">← All posts</a>
+      <div class="post-meta">
+        <span class="tag" data-tag="physics">Physics</span>
+        <time datetime="2026-10-21">Oct 21, 2026</time>
+        <span>10 min read</span>
+      </div>
+      <h1>How to learn physics</h1>
+      <p class="lede">Textbook suggestions and alternative resources to learn physics in the most efficient way possible. Recommendations collected throughout 4 years of physics study and research.</p>
+    </div>
+
+    <div class="prose" style="margin-top:40px">
+
+      <!-- ================= THE PATH AHEAD ================= -->
+      <h2>The path ahead</h2>
+      <p>The blue boxes are the math, in order from top to bottom. Each physics course hangs off the last math course it needs, so it also needs every math course above that one. Take the math first, or at least at the same time.</p>
+
+      <figure class="diagram">
+<pre class="mermaid">
+flowchart TD
+  %% Math ladder: each math course builds on the one above it.
+  SV["Single-variable calculus"]:::math
+  MV["Multivariable calculus"]:::math
+  ODE["Differential equations"]:::math
+  LA["Linear algebra"]:::math
+  PDE["Partial differential equations"]:::math
+  CV["Complex variables"]:::math
+  PS["Probability &amp; statistics"]:::math
+  SV ==> MV ==> ODE ==> LA ==> PDE ==> CV
+  MV ==> PS
+
+  %% Each physics course hangs off the LAST math course it needs.
+  P1["Physics I"]:::phys
+  P2["Physics II"]:::phys
+  MOD["Modern Physics"]:::phys
+  TH["Stat / Thermal Physics"]:::phys
+  MM["Mathematical Physics"]:::phys
+  CM["Classical Mechanics"]:::phys
+  EM["Electricity &amp; Magnetism"]:::phys
+  QM["Quantum Mechanics"]:::phys
+  GR["General Relativity"]:::phys
+  QFT["Quantum Field Theory"]:::phys
+  SV --> P1
+  PS --> TH
+  LA --> MM & CM
+  PDE --> EM & QM & GR
+  CV --> QFT
+
+  %% Small topics: learned inside the physics course.
+  GT(["Group theory"]):::small
+  DG(["Differential geometry"]):::small
+  QM & QFT -.- GT
+  GR -.- DG
+
+  %% Physics prerequisites (red arrows). Keep these last: linkStyle counts edges in order.
+  P1 --> P2 --> MOD
+  P2 --> CM
+  QM --> QFT
+  P2 --> EM
+  P1 --> CM
+  linkStyle 17,18,19,20,21,22 stroke:#EA4335,stroke-width:2px
+
+  classDef math fill:#e8f0fe,stroke:#4285F4,stroke-width:1.5px,color:#1a1c20
+  classDef phys fill:#fce8e6,stroke:#EA4335,stroke-width:1.5px,color:#1a1c20
+  classDef small fill:#fef7e0,stroke:#FBBC05,stroke-width:1.5px,stroke-dasharray:4 3,color:#5b6370,font-size:13px
+</pre>
+        <figcaption class="key">
+          <span><i style="background:var(--blue)"></i>Math course</span>
+          <span><i style="background:var(--red)"></i>Physics course</span>
+          <span><i style="background:var(--yellow)"></i>Learn it as you go (dashed)</span>
+          <span><i style="background:var(--red);width:18px;height:3px;border-radius:2px"></i>Take this physics course first</span>
+          <span class="swipe-hint">Swipe the diagram sideways to see all of it.</span>
+        </figcaption>
+      </figure>
+
+      <p><strong>Physics order:</strong> Physics I → Physics II → Mathematical Physics → Modern Physics → Stat/Thermal → Classical Mechanics → E&amp;M → Quantum → General Relativity → Quantum Field Theory.</p>
+      <p class="note">Group theory and differential geometry are small on purpose. You usually don't need a full course in either. Quantum, General Relativity, and QFT books teach the parts you need.</p>
+
+      <h2>How to actually learn it</h2>
+      <p>Physics is learned by solving problems, not by reading. Reading a chapter feels like progress, but the real test is closing the book and solving a problem from a blank page. Spend more of your time on problems than on reading, and treat the worked examples as problems too: cover the solution and try them yourself first.</p>
+      <p>When you start a problem, draw a picture and write down what you know and what you're looking for. Solve it with symbols and plug in numbers only at the end. Then check your answer: do the units work, and does it do the right thing in a simple case (no friction, zero angle, very large mass)? When you get stuck, stay stuck for a while before you look at the solution. If you do look, redo the problem a few days later without help.</p>
+      <p>Don't wait until the math feels perfect before starting the physics. A lot of the math only clicks once you use it. Try explaining ideas out loud, to a friend or a study group. If you can't explain it simply, you don't understand it yet. And be patient: the same ideas (oscillators, waves, energy) come back in almost every course, and each time you understand them a little more deeply.</p>
+
+      <!-- ================= TEXTBOOKS ================= -->
+      <h2>Textbook suggestions</h2>
+      <p class="note">If a link isn't provided in the recommendations below, search online. You can find them easily.</p>
+      <!-- Book covers live in assets/covers/. A card with an empty <div class="cover"></div> is waiting for one:
+           put the image in assets/covers/ and replace that div with the <img ...> line in the comment next to it. -->
+
+      <h3>Physics I</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/halliday.jpg" alt="Cover of Fundamentals of Physics">
+        <div class="book-body">
+          <p class="book-title"><i>Fundamentals of Physics</i> <span class="by">· Halliday, Resnick &amp; Walker</span></p>
+          <p>If you're taking your first calculus-based physics class, this is the book. The first half covers motion, forces, energy, rotation, gravity, waves, and heat. The worked examples are clear, and the practice problems start easy and ramp up, so you never feel thrown into the deep end.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/openstax-vol1.jpg" alt="Cover of University Physics">
+        <div class="book-body">
+          <p class="book-title"><i>University Physics, Volume 1</i> <span class="by">· OpenStax</span></p>
+          <p class="book-links"><a href="https://openstax.org/details/books/university-physics-volume-1" target="_blank" rel="noopener"><b>Read free</b></a></p>
+          <p>Can't get Halliday, or want a second explanation? This covers the same Physics I topics (mechanics, oscillations, waves, and sound) for free, with worked examples that show how to set up a problem and check your answer.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Physics II</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/halliday.jpg" alt="Cover of Fundamentals of Physics">
+        <div class="book-body">
+          <p class="book-title"><i>Fundamentals of Physics</i> <span class="by">· Halliday, Resnick &amp; Walker</span></p>
+          <p>Same book, second half: electric fields, circuits, magnetism, light, and optics. You already know the style and notation from Physics I, so the only new thing to wrestle with is the physics.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/openstax-vol2.jpg" alt="Cover of University Physics">
+        <div class="book-body">
+          <p class="book-title"><i>University Physics, Volume 2</i> <span class="by">· OpenStax</span></p>
+          <p class="book-links"><a href="https://openstax.org/details/books/university-physics-volume-2" target="_blank" rel="noopener"><b>Read free</b></a></p>
+          <p>The free version of Physics II: thermodynamics, electricity, and magnetism, in the same style as Volume 1. Great when a Halliday chapter isn't clicking and you want it explained a different way.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Mathematical Physics</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/boas.jpg" alt="Cover of Mathematical Methods in the Physical Sciences">
+        <div class="book-body">
+          <p class="book-title"><i>Mathematical Methods in the Physical Sciences</i> <span class="by">· Mary L. Boas</span><span class="level ug">Undergrad</span></p>
+          <p>If this math is new to you, start here. Boas covers series, complex numbers, linear algebra, vector calculus, ODEs, Fourier series, special functions, PDEs, and probability. It's shorter and friendlier than Riley, and it reads like a patient tutor.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/riley.jpg" alt="Cover of Mathematical Methods for Physics and Engineering">
+        <div class="book-body">
+          <p class="book-title"><i>Mathematical Methods for Physics and Engineering</i> <span class="by">· Riley, Hobson &amp; Bence</span><span class="level ug">Undergrad</span></p>
+          <p>The book you'll keep on your shelf long after the class ends. It covers almost all the math a physics degree uses: vector calculus, series, ODEs, PDEs, complex variables, linear algebra, Fourier transforms, group theory, and tensors. It's huge, so use it as a reference, not a cover-to-cover read.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Modern Physics</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/taylor-wheeler.jpg" alt="Cover of Spacetime Physics: Introduction to Special Relativity">
+        <div class="book-body">
+          <p class="book-title"><i>Spacetime Physics: Introduction to Special Relativity</i> <span class="by">· Taylor &amp; Wheeler</span></p>
+          <p class="book-links"><a href="https://www.eftaylor.com/spacetimephysics/" target="_blank" rel="noopener"><b>Read free</b></a></p>
+          <p>If relativity has always sounded intimidating, this book will change your mind, and you only need algebra. It covers spacetime diagrams, the spacetime interval, Lorentz transformations, and energy and momentum, all built from one idea: the interval that every observer agrees on. The authors even made it free.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/openstax-vol3.jpg" alt="Cover of University Physics">
+        <div class="book-body">
+          <p class="book-title"><i>University Physics, Volume 3</i> <span class="by">· OpenStax</span></p>
+          <p class="book-links"><a href="https://openstax.org/details/books/university-physics-volume-3" target="_blank" rel="noopener"><b>Read free</b></a></p>
+          <p>Taylor &amp; Wheeler only covers relativity, so use this for the quantum half of Modern Physics: photons and matter waves, intro quantum mechanics, atoms, condensed matter, nuclear physics, and particle physics and cosmology. It's free and written for students coming straight out of Physics I and II.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Statistical / Thermal Physics</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/schroeder-thermal.jpg" alt="Cover of An Introduction to Thermal Physics">
+        <div class="book-body">
+          <p class="book-title"><i>An Introduction to Thermal Physics</i> <span class="by">· Daniel V. Schroeder</span><span class="level ug">Undergrad</span></p>
+          <p class="book-links"><a href="https://api.pageplace.de/preview/DT0400.9780192648105_A40933204/preview-9780192648105_A40933204.pdf" target="_blank" rel="noopener"><b>Free preview</b></a> (Chapter 1)</p>
+          <p>Thermo is the class where a lot of people memorize equations without knowing where they come from. Schroeder fixes that. It covers energy, entropy, engines and refrigerators, free energy, Boltzmann statistics, quantum gases, and phase transitions, and it builds entropy by literally counting states, so you see <em>why</em> the laws of thermodynamics are true.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Classical Mechanics</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/taylor-cm.jpg" alt="Cover of Classical Mechanics">
+        <div class="book-body">
+          <p class="book-title"><i>Classical Mechanics</i> <span class="by">· John R. Taylor</span><span class="level ug">Undergrad</span></p>
+          <p>Start here, especially if you're learning on your own. It covers oscillations, Lagrangian and Hamiltonian mechanics, central forces, and rigid bodies, plus chapters on chaos and continuum mechanics, and it's the easiest mechanics book on this list to actually read.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/thornton-marion.jpg" alt="Cover of Classical Dynamics of Particles and Systems">
+        <div class="book-body">
+          <p class="book-title"><i>Classical Dynamics of Particles and Systems</i> <span class="by">· Thornton &amp; Marion</span><span class="level ug">Undergrad</span></p>
+          <p>Your upper-level mechanics course will probably use this one. It covers oscillations, gravitation, calculus of variations, Lagrangian and Hamiltonian mechanics, central forces, rigid bodies, and coupled oscillators. The problems are hard, but they're the kind that make the math finally stick.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/goldstein.jpg" alt="Cover of Classical Mechanics">
+        <div class="book-body">
+          <p class="book-title"><i>Classical Mechanics</i> <span class="by">· Herbert Goldstein</span><span class="level grad">Grad</span></p>
+          <p>For grad school, or seniors getting ready for it. It covers variational principles, rigid bodies, canonical transformations, Hamilton-Jacobi theory, and classical fields. Goldstein shows you the structure that quantum mechanics and field theory are built on, so a lot of later physics will feel familiar.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Electricity &amp; Magnetism</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/griffiths-em.jpg" alt="Cover of Introduction to Electrodynamics">
+        <div class="book-body">
+          <p class="book-title"><i>Introduction to Electrodynamics</i>, 5th ed. <span class="by">· David J. Griffiths</span><span class="level ug">Undergrad</span></p>
+          <p>This is the textbook a lot of physics majors actually enjoy reading. It covers vector calculus, electrostatics, magnetostatics, fields in matter, Maxwell's equations, waves, radiation, and relativity, and it reads like a friendly professor talking you through every step.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/jackson.jpg" alt="Cover of Classical Electrodynamics">
+        <div class="book-body">
+          <p class="book-title"><i>Classical Electrodynamics</i>, 3rd ed. <span class="by">· J. D. Jackson</span><span class="level grad">Grad</span></p>
+          <p>The gold standard. Jackson is the encyclopedia of E&amp;M, and the book first-year grad students famously wrestle with. It covers boundary-value problems, multipoles, waveguides, radiation, scattering, and relativistic electrodynamics, and it teaches hard math (Green's functions, special functions) by making you use it. Heads up: it switches from SI units to Gaussian units partway through.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Quantum Mechanics</h3>
+      <p class="note"><b>Why spin first?</b> Most courses use Griffiths' <i>Introduction to Quantum Mechanics</i>, which starts with wave functions. Spin-first books (McIntyre and Townsend) start with spin, where a measurement has only a few possible outcomes. That's a <em>discrete</em> basis, so a state is just a short list of numbers and the math is small matrices. Once those rules make sense, wave functions are the same idea with a <em>continuous</em> basis (every position is a possible outcome), and sums turn into integrals. Going from discrete to continuous is a lot more intuitive than learning both at once.</p>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/mcintyre.jpg" alt="Cover of Quantum Mechanics: A Paradigms Approach">
+        <div class="book-body">
+          <p class="book-title"><i>Quantum Mechanics: A Paradigms Approach</i> <span class="by">· David H. McIntyre</span><span class="level ug">Undergrad</span></p>
+          <p>If you like seeing the experiment before the theory, start here. It opens with spin and Stern-Gerlach experiments, then covers wave mechanics, hydrogen, the harmonic oscillator, perturbation theory, and identical particles. You learn the core rules of quantum (states, measurement, Dirac notation) using nothing harder than 2×2 matrices.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/townsend.jpg" alt="Cover of A Modern Approach to Quantum Mechanics">
+        <div class="book-body">
+          <p class="book-title"><i>A Modern Approach to Quantum Mechanics</i> <span class="by">· John S. Townsend</span><span class="level ug">Undergrad</span></p>
+          <p>A great bridge if you're thinking about grad school. Like McIntyre, it starts with spin and Dirac notation, then covers angular momentum, time evolution, wave mechanics, path integrals, and perturbation theory. It follows a path a lot like Sakurai's, just gentler, so Sakurai feels familiar when you get there.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/sakurai.jpg" alt="Cover of Modern Quantum Mechanics">
+        <div class="book-body">
+          <p class="book-title"><i>Modern Quantum Mechanics</i> <span class="by">· J. J. Sakurai</span><span class="level grad">Grad</span></p>
+          <p>The standard grad quantum book. It covers Dirac formalism, symmetry, angular momentum, approximation methods, scattering, and identical particles. It's elegant and doesn't hold your hand, so it's best once you've worked through McIntyre or Townsend.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>General Relativity</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/schutz.jpg" alt="Cover of A First Course in General Relativity">
+        <div class="book-body">
+          <p class="book-title"><i>A First Course in General Relativity</i> <span class="by">· Bernard Schutz</span><span class="level ug">Undergrad</span></p>
+          <p>Your first real look at general relativity, best once you know special relativity and linear algebra. It covers special relativity with tensors, curved spacetime, Einstein's equations, gravitational waves, black holes, and cosmology, and it teaches the differential geometry you need one step at a time, so you don't need a geometry course first.</p>
+        </div>
+      </div>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/mtw.jpg" alt="Cover of Gravitation">
+        <div class="book-body">
+          <p class="book-title"><i>Gravitation</i> <span class="by">· Misner, Thorne &amp; Wheeler</span><span class="level grad">Grad</span></p>
+          <p>The giant black book. At over 1,200 pages, it's the encyclopedia of GR: geometry, stars, black holes, gravitational waves, cosmology, and experimental tests. Don't read it front to back. Its "Track 1 / Track 2" setup lets you skip the hardest parts on a first pass.</p>
+        </div>
+      </div>
+
+      <div class="next-arrow" aria-hidden="true"><svg width="18" height="30" viewBox="0 0 18 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v25M3 21l6 6 6-6"/></svg></div>
+
+      <h3>Quantum Field Theory</h3>
+      <div class="book">
+        <img class="cover" loading="lazy" src="../assets/covers/peskin-schroeder.jpg" alt="Cover of An Introduction to Quantum Field Theory">
+        <div class="book-body">
+          <p class="book-title"><i>An Introduction to Quantum Field Theory</i> <span class="by">· Peskin &amp; Schroeder</span><span class="level grad">Grad</span></p>
+          <p>When you need to actually calculate things in QFT, this is the book. It covers quantizing fields, Feynman rules, QED, renormalization, non-abelian gauge theory, and the Standard Model. It's the standard course text, and working its problems is how most people learn to compute in QFT.</p>
+        </div>
+      </div>
+
+      <!-- ================= OTHER RESOURCES ================= -->
+      <h2>Other resources</h2>
+      <ul>
+        <li><a href="https://www.feynmanlectures.caltech.edu/" target="_blank" rel="noopener"><b>The Feynman Lectures on Physics</b></a>: all three volumes, free to read online from Caltech. They aren't just for freshmen and sophomores: Volume II (E&amp;M) and Volume III (quantum) are worth rereading alongside upper-level courses, because Feynman explains <em>why</em> things work where most textbooks just show how.</li>
+        <li><a href="https://phet.colorado.edu/" target="_blank" rel="noopener"><b>PhET Interactive Simulations</b></a>: free physics labs in your browser from CU Boulder. They're useful at every level, not just intro courses: playing with a simulation for five minutes can make an upper-level topic like quantum tunneling or wave interference make sense in a way equations alone don't.</li>
+        <li><b>Physics forums</b> like <a href="https://www.physicsforums.com/" target="_blank" rel="noopener">Physics Forums</a> and <a href="https://physics.stackexchange.com/" target="_blank" rel="noopener">Physics Stack Exchange</a>: when you're stuck on a concept, someone has probably asked the same question already. Search first, and if you post, show what you've tried. People are much more willing to help.</li>
+      </ul>
+      <p class="note">All links checked Oct 21, 2026. If one breaks, <a href="mailto:ethanwhiiite@gmail.com">let me know</a>.</p>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Ethan White</span>
+    <ul>
+      <li><a class="icon-link" href="mailto:ethanwhiiite@gmail.com" aria-label="Email"><img src="../assets/icons/email.png" alt="Email" width="28" height="28"></a></li>
+      <li><a class="icon-link" href="https://www.linkedin.com/in/ewhites" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="../assets/icons/linkedin.png" alt="LinkedIn" width="28" height="28"></a></li>
+      <li><a class="icon-link" href="https://github.com/ewhites" target="_blank" rel="noopener" aria-label="GitHub"><img src="../assets/icons/github.png" alt="GitHub" width="28" height="28"></a></li>
+    </ul>
+  </div>
+</footer>
+
+<!-- Draws the diagram in "The path ahead" from the text inside <pre class="mermaid">. -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: "base",
+    themeVariables: {
+      fontFamily: '"Instrument Sans", system-ui, sans-serif',
+      fontSize: "15px",
+      lineColor: "#5b6370",
+      primaryTextColor: "#1a1c20"
+    },
+    flowchart: { curve: "basis", nodeSpacing: 28, rankSpacing: 52, useMaxWidth: true }
+  });
+</script>
+</body>
+</html>

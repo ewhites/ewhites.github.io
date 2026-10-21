@@ -6,17 +6,14 @@ Plain HTML/CSS/JS. No build step, no frameworks.
 - `index.html` — Home
 - `blog.html` — Blog list
 - `resume.html` — Resume
-- `posts/double-pendulum.html` — Sample post with the simulation
+- `posts/how-to-learn-physics.html` — "How to learn physics" post (its diagram is drawn by Mermaid, loaded from cdn.jsdelivr.net)
 - `posts/_template.html` — Copy this to start a new post (files starting with `_` are not published by GitHub Pages)
 - `assets/style.css` — All styling, colors at the top
-- `assets/pendulum.js` — The simulation
 - `assets/og-image.png` — Link preview card (shows when the site is shared on LinkedIn, Slack, iMessage)
+- `assets/covers/` — Textbook covers for the physics post
 - `assets/logos/` — Organization logos on the Resume page
 - `assets/icons/` — Email, LinkedIn, and GitHub icons in the footer
 - `ethan-white-resume.pdf` — Linked from the Download PDF button
-
-## Before you publish
-1. Replace `ethan-white-resume.pdf` with your corrected resume (keep the same file name).
 
 ## Put it online (GitHub Pages, free)
 1. On GitHub, create a new **public** repository named exactly `ewhites.github.io`.

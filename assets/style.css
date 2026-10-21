@@ -1,5 +1,5 @@
 /* Layout: one narrow reading column (720px), sticky top bar with a four-color Google strip.
-   Google colors are accents only: the strip, tag dots, section markers, link underlines, and the simulation. */
+   Google colors are accents only: the strip, tag dots, section markers, and link underlines. */
 :root {
   /* Google brand colors (source: w3schools.com/colors/colors_brands.asp) */
   --blue: #4285F4;
@@ -214,27 +214,48 @@ td.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
 .note { font-family: var(--font-ui); font-size: 0.92rem; color: var(--muted); border-left: 3px solid var(--yellow); padding-left: 14px; }
 .sources { font-family: var(--font-ui); font-size: 0.95rem; }
 
-/* ---------- Simulation ---------- */
-.sim {
-  border: 1px solid var(--line); border-radius: var(--radius); padding: 16px;
-  display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 20px; margin-top: 32px;
+/* ---------- Reading lists (book posts) ---------- */
+/* Diagram box. Wide diagrams scroll sideways on phones instead of shrinking the text. */
+.diagram { margin: 0; min-width: 0; border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; overflow-x: auto; }
+.diagram .mermaid { margin: 0; font-family: var(--font-ui); text-align: center; color: var(--muted); font-size: 0.9rem; white-space: pre; }
+.diagram svg { min-width: 560px; height: auto; }
+.diagram figcaption { margin-top: 10px; font-family: var(--font-ui); position: sticky; left: 0; }
+.swipe-hint { display: none !important; font-style: italic; }
+@media (max-width: 620px) { .swipe-hint { display: inline-flex !important; } }
+/* One block per subject (h3), one card per book */
+.prose h3 { font-family: var(--font-ui); margin-top: 14px; }
+.book {
+  font-family: var(--font-ui); font-size: 0.97rem; line-height: 1.55;
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: start;
 }
-.sim-stage { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
-.sim canvas { display: block; width: 100%; max-width: 100%; }
-#pendulum { aspect-ratio: 1 / 1; background: var(--surface); border-radius: 8px; }
-#gapChart { height: 150px; }
-.sim-side { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-.control { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; }
-.control label { font-weight: 500; display: flex; justify-content: space-between; gap: 8px; }
-.control output { font-family: var(--font-mono); color: var(--muted); }
-.control input[type="range"] { width: 100%; accent-color: var(--blue); }
-.control select { font: inherit; padding: 6px 8px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
-.readouts { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; margin: 0; font-size: 0.88rem; border-top: 1px solid var(--line); padding-top: 14px; }
-.readouts dt { color: var(--muted); }
-.readouts dd { margin: 0; font-family: var(--font-mono); font-variant-numeric: tabular-nums; text-align: right; }
+/* Book cover slot (2:3, like a real cover). Empty div = dashed placeholder; <img class="cover"> = the real cover. */
+.cover {
+  width: 64px; aspect-ratio: 2 / 3; border-radius: 4px;
+  background: var(--surface); border: 1px dashed var(--line);
+}
+img.cover { display: block; height: auto; aspect-ratio: auto; object-fit: cover; border: 1px solid var(--line); background: none; }
+.book-body { min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.book-title { font-weight: 600; }
+.book-title i { font-style: normal; }
+.book-title .by { font-weight: 400; color: var(--muted); }
+.level {
+  display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; vertical-align: 2px;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.06em;
+  border: 1px solid var(--line); color: var(--muted);
+}
+.level.ug { border-color: var(--blue); }
+.level.grad { border-color: var(--red); }
+.book-links { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 0.92rem; }
+.book-links b { font-weight: 600; }
+@media (max-width: 420px) { .book { grid-template-columns: 52px minmax(0, 1fr); gap: 12px; } .cover { width: 52px; } }
+
+/* Diagram legend (colored dots + labels) */
 .key { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 0.85rem; color: var(--muted); }
 .key span { display: inline-flex; align-items: center; gap: 6px; }
 .key i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-@media (max-width: 680px) { .sim { grid-template-columns: 1fr; } }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* Small centered arrow between textbook sections */
+.next-arrow { display: flex; justify-content: center; color: #000; margin: 4px 0 -6px; }
+.next-arrow svg { display: block; }

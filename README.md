@@ -11,6 +11,7 @@ Plain HTML/CSS/JS. No build step, no frameworks.
 - `assets/style.css` — All styling, colors at the top
 - `assets/pendulum.js` — The simulation
 - `assets/og-image.png` — Link preview card (shows when the site is shared on LinkedIn, Slack, iMessage)
+- `assets/logos/` — Organization logos on the Resume page
 - `assets/icons/` — Email, LinkedIn, and GitHub icons in the footer
 - `ethan-white-resume.pdf` — Linked from the Download PDF button
 
